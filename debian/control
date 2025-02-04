@@ -11,5 +11,5 @@ Rules-Requires-Root: no
 
 Package: osync
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends};inotify-tools
 Description: A two way filesync script running on bash Linux, BSD, Android, MacOSX, Cygwin, MSYS2, Win10 bash and virtually any system supporting bash. File synchronization is bidirectional, and can be run manually, as scheduled task, or triggered on file changes in monitor mode. It is a command line tool rsync wrapper with a lot of additional features baked in.

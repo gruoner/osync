@@ -1,3 +1,8 @@
+osync (1.1) RELEASED; urgency=medium
+
+  * added config files
+
+ -- Torsten Gruoner <tohempel@unknown>  Sun, 19 Jan 2025 15:11:45 +0100
 osync (1.0) UNRELEASED; urgency=medium
 
   * Initial Release.

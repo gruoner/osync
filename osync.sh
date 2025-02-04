@@ -1975,6 +1975,7 @@ function PostInit {
     SSH_CMD="$(type -p ssh) $SSH_COMP -q $SSH_OPTS $REMOTE_USER@$REMOTE_HOST -p $REMOTE_PORT"
     SCP_CMD="$(type -p scp) $SSH_COMP -q -P $REMOTE_PORT"
     RSYNC_SSH_CMD="$(type -p ssh) $SSH_COMP -q $SSH_OPTS -p $REMOTE_PORT"
+    ln -s $(find /tmp -name "krb5cc_$UID*" 2>/dev/null) /tmp/krb5cc_$UID
 	else
 		SSH_PASSWORD=""
 		SSH_CMD=""

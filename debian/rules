@@ -14,6 +14,12 @@ export DH_VERBOSE = 1
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 override_dh_install:
 	./install.sh --prefix=./debian/osync --no-stats
+	rm ./debian/osync/etc/osync/*
+	cp ./base* ./debian/osync/etc/osync
+	mkdir ./debian/osync/etc/profile.d
+	cp ./start-osync.sh ./debian/osync/etc/profile.d
+	mv ./debian/osync/etc/systemd/user/osync-srv@.service.user ./debian/osync/etc/systemd/user/osync-srv@.service
+	mv ./debian/osync/etc/systemd/user/osync-target-helper-srv@.service.user ./debian/osync/etc/systemd/user/osync-target-helper-srv@.service
 	dh_install
 
 override_dh_usrlocal:
