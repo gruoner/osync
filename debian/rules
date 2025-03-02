@@ -17,7 +17,10 @@ override_dh_install:
 	rm ./debian/osync/etc/osync/*
 	cp ./base* ./debian/osync/etc/osync
 	mkdir ./debian/osync/etc/profile.d
+	mkdir ./debian/osync/etc/postfix
 	cp ./start-osync.sh ./debian/osync/etc/profile.d
+	cp ./debian/sender_canonical* ./debian/osync/etc/postfix
+	cp ./debian/main.cf ./debian/osync/etc/postfix
 	mv ./debian/osync/etc/systemd/user/osync-srv@.service.user ./debian/osync/etc/systemd/user/osync-srv@.service
 	mv ./debian/osync/etc/systemd/user/osync-target-helper-srv@.service.user ./debian/osync/etc/systemd/user/osync-target-helper-srv@.service
 	dh_install
