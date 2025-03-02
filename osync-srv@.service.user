@@ -5,7 +5,8 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/osync.sh /etc/osync/%i --on-changes --silent
+ExecStart=/usr/local/bin/osync.sh /etc/osync/%i --on-changes --summary --stats --non-interactive
 SuccessExitStatus=0 2
+
 [Install]
 WantedBy=multi-user.target
