@@ -16,8 +16,20 @@ override_dh_install:
 	./install.sh --prefix=./debian/osync --no-stats
 	rm ./debian/osync/etc/osync/*
 	cp ./base* ./debian/osync/etc/osync
+	cp ./osync-sleep.sh ./debian/osync/usr/local/bin
 	mkdir ./debian/osync/etc/profile.d
 	mkdir ./debian/osync/etc/postfix
+	mkdir ./debian/osync/lib
+	mkdir ./debian/osync/lib/systemd
+	mkdir ./debian/osync/lib/systemd/system
+	cp ./osync-suspend.service ./debian/osync/lib/systemd/system
+	cp ./osync-hibernate.service ./debian/osync/lib/systemd/system
+	cp ./osync-resume.service ./debian/osync/lib/systemd/system
+	mkdir ./debian/osync/var/osync
+	mkdir ./debian/osync/var/osync/base
+	chmod 777 ./debian/osync/var/osync/base
+	mkdir ./debian/osync/var/osync/extended
+	chmod 777 ./debian/osync/var/osync/extended
 	cp ./start-osync.sh ./debian/osync/etc/profile.d
 	cp ./debian/sender_canonical* ./debian/osync/etc/postfix
 	cp ./debian/main.cf ./debian/osync/etc/postfix
