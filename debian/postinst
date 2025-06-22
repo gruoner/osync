@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+systemctl enable osync-hibernate.service
+systemctl enable osync-suspend.service
+systemctl enable osync-resume.service
+
+exit 0

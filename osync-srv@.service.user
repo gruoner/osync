@@ -7,8 +7,6 @@ Wants=network-online.target
 Type=simple
 ExecStart=/usr/local/bin/osync.sh /etc/osync/%i --on-changes --summary --stats --non-interactive
 SuccessExitStatus=0 2
-KillMode=process
-ExecStop=pkill sleep
 
 [Install]
 WantedBy=multi-user.target
