@@ -25,6 +25,7 @@ override_dh_install:
 	cp ./osync-suspend.service ./debian/osync/lib/systemd/system
 	cp ./osync-hibernate.service ./debian/osync/lib/systemd/system
 	cp ./osync-resume.service ./debian/osync/lib/systemd/system
+	mkdir ./debian/osync/var
 	mkdir ./debian/osync/var/osync
 	mkdir ./debian/osync/var/osync/base
 	chmod 777 ./debian/osync/var/osync/base
