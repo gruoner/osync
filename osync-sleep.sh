@@ -16,6 +16,7 @@ case "$1" in
 	    for u in $USERS
 	    do
 		systemctl --machine=$u@ --user stop osync-srv@base-profile.conf
+		systemctl --machine=$u@ --user stop osync-srv@extended-profile.conf
 	    done
         exit 0
         ;;
@@ -23,6 +24,7 @@ case "$1" in
 	    for u in $USERS
 	    do
 		 systemctl --machine=$u@ --user start osync-srv@base-profile.conf
+		 systemctl --machine=$u@ --user start osync-srv@extended-profile.conf
 	    done
         exit 0
         ;;

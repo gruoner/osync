@@ -3,6 +3,8 @@ set -e
 
 systemctl enable osync-hibernate.service
 systemctl enable osync-suspend.service
-systemctl enable osync-resume.service
+#systemctl enable osync-resume.service
+
+chmod -R 777 /var/osync
 
 exit 0

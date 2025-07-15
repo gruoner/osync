@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=aktuelles Profil hochladen
+Exec=/usr/local/bin/upload-profile.sh
+Comment=
+Terminal=true
+PrefersNonDefaultGPU=false
+Icon=/usr/local/share/upload.png
+Type=Application

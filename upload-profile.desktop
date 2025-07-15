@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=aktuelles Profil herunterladen
+Exec=/usr/local/bin/download-profile.sh
+Comment=
+Terminal=true
+PrefersNonDefaultGPU=false
+Icon=/usr/local/share/download.png
+Type=Application
+Hidden=false
+NoDisplay=false
